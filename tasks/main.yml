@@ -5,7 +5,7 @@
   with_items: "{{cnos_vlag_1tier_leaf_switch1_data}}"
 
 - name: Applying CLI template on VLAG Tier1 Leaf Switch1
-  cnos_conditional_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['username']}}  password={{ hostvars[inventory_hostname]['password']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} condition={{ hostvars[inventory_hostname]['condition']}} flag='{{item.flag}}' commandfile=./commands/cnos_vlag_1tier_leaf_switch1_{{ inventory_hostname }}_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_switch1_{{ inventory_hostname }}_output.txt
+  cnos_conditional_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['ansible_ssh_user']}}  password={{ hostvars[inventory_hostname]['ansible_ssh_pass']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} condition={{ hostvars[inventory_hostname]['condition']}} flag='{{item.flag}}' commandfile=./commands/cnos_vlag_1tier_leaf_switch1_{{ inventory_hostname }}_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_switch1_{{ inventory_hostname }}_output.txt
   with_items: "{{cnos_vlag_1tier_leaf_switch1_data}}"
 
 - name: Replace VLAG Tier1 Leaf CLI template with value for switch2
@@ -14,7 +14,7 @@
 
 
 - name: Applying CLI template on VLAG Tier1 Leaf Switch2
-  cnos_conditional_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['username']}}  password={{ hostvars[inventory_hostname]['password']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} condition={{ hostvars[inventory_hostname]['condition']}} flag='{{item.flag}}' commandfile=./commands/cnos_vlag_1tier_leaf_switch2_{{ inventory_hostname }}_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_switch2_{{ inventory_hostname }}_output.txt
+  cnos_conditional_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['ansible_ssh_user']}}  password={{ hostvars[inventory_hostname]['ansible_ssh_pass']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} condition={{ hostvars[inventory_hostname]['condition']}} flag='{{item.flag}}' commandfile=./commands/cnos_vlag_1tier_leaf_switch2_{{ inventory_hostname }}_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_switch2_{{ inventory_hostname }}_output.txt
   with_items: "{{cnos_vlag_1tier_leaf_switch2_data}}"
 
 - name: Replace VLAG Tier1 Leaf CLI template with value
@@ -22,6 +22,6 @@
   with_items: "{{cnos_vlag_1tier_leaf_data}}"
 
 - name: Applying CLI template on  VLAG Tier1 Leaf Switches
-  cnos_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['username']}}  password={{ hostvars[inventory_hostname]['password']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} commandfile=./commands/cnos_vlag_1tier_leaf_{{ inventory_hostname }}_show_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_{{ inventory_hostname }}_show_output.txt
+  cnos_template: host={{ inventory_hostname }} username={{ hostvars[inventory_hostname]['ansible_ssh_user']}}  password={{ hostvars[inventory_hostname]['ansible_ssh_pass']}} deviceType={{ hostvars[inventory_hostname]['deviceType']}} commandfile=./commands/cnos_vlag_1tier_leaf_{{ inventory_hostname }}_show_commands.txt outputfile=./results/cnos_vlag_1tier_leaf_{{ inventory_hostname }}_show_output.txt
   with_items: "{{cnos_vlag_1tier_leaf_data}}"
 # Completed file
