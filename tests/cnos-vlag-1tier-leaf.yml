@@ -2,7 +2,7 @@
  - name: Module to Configure Tier1 Lenovo Leaf Switches
    hosts: cnos-vlag-1tier-leaf
    gather_facts: no
-   connection: local
+   connection: network_cli
 
    roles:
     - lenovo.cnos-vlag-1tier-leaf
